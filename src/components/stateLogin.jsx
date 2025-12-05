@@ -8,7 +8,7 @@ export default function Login() {
   handleInputChange:handleEmailChange,
   handleInputBlur:handleEmailBlur,
   hasError:EmailHasError
-}=useInput('',(value)=> isEmail(value) && isEmpty(value));
+}=useInput('',(value)=> isEmail(value) && !isEmpty(value));
 
 const {
   value:passwordValue,
@@ -58,7 +58,7 @@ console.log(emailValue,passwordValue);
       </div>
 
       <p className="form-actions">
-        <button className="button button-flat" id='Reset'>Reset</button>
+        <button className="button button-flat">Reset</button>
         <button  className="button" >Login</button>
       </p>
     </form>
